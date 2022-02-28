@@ -1,0 +1,10 @@
+[package]
+name = "rust-sandbox"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+[[bin]]
+name = "rust-sandbox"
+path = "src/main.rs"
