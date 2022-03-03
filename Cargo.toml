@@ -2,10 +2,15 @@
 name = "rust-sandbox"
 version = "0.1.0"
 edition = "2021"
+default-run = "guessing"
 
 [dependencies]
 rand = "0.8.5"
 
 [[bin]]
-name = "rust-sandbox"
-path = "src/main.rs"
+name = "guessing"
+path = "src/guessing.rs"
+
+[[bin]]
+name = "function"
+path = "src/function.rs"
