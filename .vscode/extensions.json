@@ -1,5 +1,8 @@
 {
-    "recommendations": [
-        "Swellaby.rust-pack"
-    ]
+  "recommendations": [
+    "serayuzgur.crates",
+    "bungcip.better-toml",
+    "matklad.rust-analyzer",
+    "vadimcn.vscode-lldb"
+  ]
 }

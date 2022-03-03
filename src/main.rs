@@ -1,34 +1,34 @@
-use rand::Rng;
-use std::cmp::Ordering;
-use std::io;
+fn main() -> () {
+    println!("0°F is equal to {}°C", to_celcius(0.0));
+    println!("0°C is equal to {}°F", to_fahrenheit(0.0));
 
-fn main() {
-    println!("Guess the number!");
+    println!("The {}th Fibonnacci number is {}", 8, fibonacci(8));
+}
 
-    let secret_number = rand::thread_rng().gen_range(1..101);
+fn to_celcius(fahrenheit: f64) -> f64 {
+    (fahrenheit - 32.0) / 1.8
+}
 
-    println!("The secret number is: {}", secret_number);
+fn to_fahrenheit(celcius: f64) -> f64 {
+    (celcius * 1.8) + 32.0
+}
 
-    loop {
-        println!("Please input your guess.");
+fn fibonacci(mut n: u8) -> u8 {
+    if n == 0 {
+        0
+    } else if n == 1 {
+        1
+    } else {
+        let mut r = 0;
+        let mut s = 1;
 
-        let mut guess = String::new();
-
-        io::stdin()
-            .read_line(&mut guess)
-            .expect("Failed to read line");
-
-        let guess: u8 = match guess.trim().parse() {
-            Result::Ok(num) => num,
-            Result::Err(_) => continue,
-        };
-
-        println!("You guessed: {}", guess);
-
-        match guess.cmp(&secret_number) {
-            Ordering::Less => println!("Too small!"),
-            Ordering::Greater => println!("Too big!"),
-            Ordering::Equal => println!("You win!"),
+        while n > 2 {
+            let t = r + s;
+            r = s;
+            s = t;
+            n = n - 1
         }
+
+        r + s
     }
 }
