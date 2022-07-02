@@ -2,10 +2,14 @@
 name = "rust-sandbox"
 version = "0.1.0"
 edition = "2021"
-default-run = "guessing"
+default-run = "main"
 
 [dependencies]
 rand = "0.8.5"
+
+[[bin]]
+name = "main"
+path = "src/main.rs"
 
 [[bin]]
 name = "guessing"
@@ -14,3 +18,20 @@ path = "src/guessing.rs"
 [[bin]]
 name = "function"
 path = "src/function.rs"
+
+[[bin]]
+name = "string"
+path = "src/string.rs"
+
+[[bin]]
+name = "struct"
+path = "src/struct.rs"
+
+[[bin]]
+name = "method"
+path = "src/method.rs"
+
+[[bin]]
+name = "enum"
+path = "src/enum.rs"
+

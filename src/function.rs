@@ -1,4 +1,4 @@
-fn main() -> () {
+pub fn main() -> () {
     println!("0°F is equal to {}°C", to_celcius(0.0));
     println!("0°C is equal to {}°F", to_fahrenheit(0.0));
 
