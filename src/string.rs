@@ -12,6 +12,8 @@ pub fn main() {
     let s3 = String::from("hello world");
     let word = first_word(&s3[..]);
     println!("{}", word);
+
+    next();
 }
 
 fn calculate_length(s: &String) -> usize {
@@ -32,4 +34,29 @@ fn first_word(s: &str) -> &str {
     }
 
     &s[..]
+}
+
+fn next() {
+    let mut _s = String::new();
+
+    let data = "initial contents";
+    let _s = data.to_string();
+    let _s = String::from(data);
+
+    let mut s = String::from("foo");
+    s.push_str("bar");
+
+    println!("s is {}", s);
+
+    let s1 = String::from("Hello, ");
+    let s2 = String::from("world!");
+    let _s3 = s1 + &s2;
+
+    let s1 = String::from("tic");
+    let s2 = String::from("tac");
+    let s3 = String::from("toe");
+
+    // let s = s1 + "-" + &s2 + "-" + &s3;
+    let s = format!("{}-{}-{}", s1, s2, s3);
+    println!("{}-{}-{}\n{}", s1, s2, s3, s);
 }
