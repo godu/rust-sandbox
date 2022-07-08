@@ -35,3 +35,7 @@ path = "src/method.rs"
 name = "enum"
 path = "src/enum.rs"
 
+[[bin]]
+name = "lib"
+path = "src/lib.rs"
+
