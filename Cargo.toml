@@ -39,3 +39,8 @@ path = "src/enum.rs"
 name = "lib"
 path = "src/lib.rs"
 
+[[bin]]
+name = "vector"
+path = "src/vector.rs"
+
+

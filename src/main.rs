@@ -6,6 +6,7 @@ mod method;
 mod string;
 #[path = "struct.rs"]
 mod struct_;
+mod vector;
 
 fn main() {
     guessing::main();
@@ -14,4 +15,5 @@ fn main() {
     struct_::main();
     method::main();
     enum_::main();
+    vector::main();
 }
