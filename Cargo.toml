@@ -43,4 +43,8 @@ path = "src/lib.rs"
 name = "vector"
 path = "src/vector.rs"
 
+[[bin]]
+name = "hash_map"
+path = "src/hash_map.rs"
+
 
